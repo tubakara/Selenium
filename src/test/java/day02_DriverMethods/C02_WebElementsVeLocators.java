@@ -34,14 +34,12 @@ findElement(BY.id("attribute degeri")) seklinde yazariz.
         //amazon sayfasindaki <input>ve  <a> taglarinin sayisini yazdirin
         List<WebElement> inputTags=driver.findElements(By.tagName("input"));
         System.out.println("Input Tag Sayisi= "+inputTags.size());
-
-        List <WebElement>linklerList=driver.findElements(By.tagName("a"));
-        System.out.println("Link sayisi: "+linklerList.size());
-
-        for (WebElement w:linklerList) {
+        List<WebElement> linklerList = driver.findElements(By.tagName("a"));
+        System.out.println("Link Sayısı = "+linklerList.size());
+        for(WebElement w:linklerList){
             System.out.println(w.getText());
-
         }
+
 
 
 

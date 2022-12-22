@@ -34,30 +34,30 @@ public class C04_ClassWork {
         //sonuc sayisini lambda ile yazdirin
         Arrays.stream(aramaSonucYazisi.get(0).getText().split(" ")).limit(3).skip(2).forEach(System.out::println);
 
-//karsimiza cikan ilk resme tikla
+        //karsimiza cikan ilk resme tikla
 
         List<WebElement>ilkWebElement=driver.findElements(By.className("s-image"));
         ilkWebElement.get(0).click();//list e atadigimiz icin get metodunu kullanabiliriz
 
 
-//        //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
-//        WebElement aramakutusu = driver.findElement(By.id("twotabsearchtextbox"));
-//        aramakutusu.sendKeys("city bike", Keys.ENTER);
-//
-//        //Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
-//        List<WebElement> aramasonuclari = driver.findElements(By.className("sg-col-inner"));
-//
-//      String aramaSonucu = aramasonuclari.get(0).getText();
-//        System.out.println(aramaSonucu);
-//
-//        String[] aramaSonucArr = aramaSonucu.split(" ");
-//        System.out.println("aramaSonucArr[2] = " + aramaSonucArr[2]);
-//        //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
-//        List<WebElement> firstImg = driver.findElements(By.className("s-image"));
-//        firstImg.get(0).click();
-//        //sayfayi kapatin
-//        driver.close();
-//
-//
+        //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
+        WebElement aramakutusu = driver.findElement(By.id("twotabsearchtextbox"));
+        aramakutusu.sendKeys("city bike", Keys.ENTER);
+
+        //Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
+        List<WebElement> aramasonuclari = driver.findElements(By.className("sg-col-inner"));
+
+      String aramaSonucu = aramasonuclari.get(0).getText();
+        System.out.println(aramaSonucu);
+
+        String[] aramaSonucArr = aramaSonucu.split(" ");
+        System.out.println("aramaSonucArr[2] = " + aramaSonucArr[2]);
+        //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
+        List<WebElement> firstImg = driver.findElements(By.className("s-image"));
+        firstImg.get(0).click();
+        //sayfayi kapatin
+        driver.close();
+
+
     }
 }
